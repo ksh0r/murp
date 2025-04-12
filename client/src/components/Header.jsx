@@ -6,8 +6,8 @@ function Header() {
         <header className="header">
         <h1>.,.MurP.,.</h1>
         <nav>
-            <Link to="/">Dashboard</Link>
-            <Link to="/tasks">Tasks</Link>
+            <Link to="/"><button className="head-but">Dashboard</button></Link>
+            <Link to="/tasks"><button className="head-but">Tasks</button></Link>
         </nav>
         </header>
     );

@@ -17,6 +17,14 @@
     font-size: 12px;
 }
 
+.head-but {
+    background-color: #242424;
+    color: #fffbf0;
+}
+.head-but:hover {
+    border-color: #fffbf0;
+    transition: border-color 0.3s ease;
+}
 nav a {
     color: #b4dbdc;
     padding: 0rem;
@@ -25,10 +33,6 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
-    color: #b4dbdc;
-    text-decoration: underline;
-}
 
 .sidebar {
     width: 150px;
