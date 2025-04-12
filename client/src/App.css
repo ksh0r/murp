@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Custom CSS starts here */
+.header {
+    background-color: #282c34;
+    color: white;
+    top: 0;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    font-size: 10px;
+}
+
+nav a {
+    color: #61dafb;
+    padding: 0rem;
+    text-decoration: none;
+}
+
+nav a.hover {
+    text-decoration: underline;
+}
