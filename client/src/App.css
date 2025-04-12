@@ -16,6 +16,7 @@
     font-size: 12px;
     margin-left: 100px;
     position: fixed;
+    font-family: "Noto Sans", sans-serif;
 }
 
 .head-but {
@@ -44,7 +45,8 @@ nav a {
     left: 0;
     background-color: #fffbf0;
     padding: 1rem;
-
+    font-family: "Noto Sans", sans-serif;
+    font-size: 17px;
 }
 
 .sidebar ul {
