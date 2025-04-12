@@ -1,0 +1,23 @@
+{
+  "name": "murp",
+  "version": "1.0.0",
+  "description": "Murmur your ideas - For Team Collab",
+  "keywords": [
+    "murp"
+  ],
+  "homepage": "https://github.com/ksh0r/murp#readme",
+  "bugs": {
+    "url": "https://github.com/ksh0r/murp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksh0r/murp.git"
+  },
+  "license": "GPL-2.0-only",
+  "author": "Kishor",
+  "type": "react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
