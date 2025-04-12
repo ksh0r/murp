@@ -5,16 +5,17 @@
   text-align: center;
 }
 
-/* Custom CSS starts here */
+/* Header */
 .header {
     background-color: #004369;
     color: white;
     top: 0;
-    position: fixed;
     left: 0;
     width: 100%;
     height: 150px;
     font-size: 12px;
+    margin-left: 100px;
+    position: fixed;
 }
 
 .head-but {
@@ -33,6 +34,7 @@ nav a {
     text-decoration: none;
 }
 
+/* Sidebar */
 
 .sidebar {
     width: 150px;
@@ -71,3 +73,12 @@ nav a {
     
 }
 
+/* Dashboard */
+.dashboard {
+    align: center;
+    margin-left: 250px;
+}
+
+.dashboard h2 {
+    font-size: 2rem;
+}
