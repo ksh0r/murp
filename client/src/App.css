@@ -43,22 +43,50 @@
 
 /* Custom CSS starts here */
 .header {
-    background-color: #282c34;
+    background-color: #004369;
     color: white;
     top: 0;
     position: fixed;
     left: 0;
-    z-index: 1000;
     width: 100%;
-    font-size: 10px;
+    height: 150px;
+    padding: 0;
 }
 
 nav a {
-    color: #61dafb;
+    color: #b4dbdc;
     padding: 0rem;
     text-decoration: none;
 }
 
-nav a.hover {
+nav a:hover {
+    color: #b4dbdc;
+    text-decoration: underline;
+}
+
+.sidebar {
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fffbf0;
+    padding: 1rem;
+
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 0;
+}
+
+.sidebar a {
+    color: #004369;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
     text-decoration: underline;
 }
