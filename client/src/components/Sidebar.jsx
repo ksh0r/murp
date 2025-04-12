@@ -5,8 +5,8 @@ function Sidebar() {
     return (
         <aside className="sidebar">
             <ul>
-                <li><Link to="/tasks">Task Management</Link></li>
-                <li><Link to="/users">Users</Link></li>
+                <li><Link to="/tasks"><button className="nav-but">Task Management</button></Link></li>
+                <li><Link to="/users"><button className="nav-but">Users</button></Link></li>
             </ul>
         </aside>
     );
