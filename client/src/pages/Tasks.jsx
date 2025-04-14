@@ -24,23 +24,46 @@ function Tasks() {
         }
     };
 
+    const handleToggleComplete = async (id, currentState) => {
+        try {
+            const res = await axios.put(`http://localhost:5000/api/tasks/${id}`, {
+                isCompleted: !currentState
+            });
+
+            setTasks(tasks.map(task => task._id === id ? { ...task, isCompleted: res.data.isCompleted } : task));
+        } catch (err) {
+            console.error("Error updating task:", err.response?.data || err.message);
+        }
+    };
+
     return (
         <div className="task-header">
-            <h2>Your Tasks</h2>
-            <div className="task-items">
-                <input 
-                    type="text"
-                    placeholder="Enter task title"
-                    value={newTitle}
-                    onChange={(e) => setNewTitle(e.target.value)}
-                    className="task-input" />
-                <button onClick={handleAddTask} className="task-button">Add</button>
-            </div>
-                <ul>
-                    {tasks.map((task) => (
-                        <li key={task.id}>{task.title} {task.isCompleted ? "✔️": ""}</li>
-                    ))}
-                </ul>
+        <h2>Your Tasks</h2>
+        <div className="task-items">
+        <input 
+        type="text"
+        placeholder="Enter task title"
+        value={newTitle}
+        onChange={(e) => setNewTitle(e.target.value)}
+        className="task-input" /> 
+        <button onClick={handleAddTask} className="task-button">Add</button>
+        </div>
+        <ul className="task-list">
+        {tasks.map((task) => (
+            <li key={task._id} className={`task-item ${task.isCompleted ? "completed" : ""}`}>
+            <label className="checkbox-wrapper">
+            <input
+            type="checkbox"
+            className="checkbox"
+            checked={task.isCompleted}
+            onChange={() => handleToggleComplete(task._id, task.isCompleted)}
+            />
+            <span className="custom-checkmark"></span>
+            </label>
+            <span className="task-text">{task.title}</span>
+            </li>
+        ))}
+        </ul>
         </div>
     );
 }
