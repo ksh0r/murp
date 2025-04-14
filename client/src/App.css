@@ -138,7 +138,7 @@ nav a {
 .task-item {
     display: flex;
     align-items: center;
-    padding: 0.75rem 1rem;
+    padding: 5px 8px;
     margin-bottom: 0.6rem;
     background-color: #242424;
     border: 2px solid #004369;
@@ -216,6 +216,8 @@ nav a {
     font-size: 1.5rem;
     font-weight: 500;
     flex-grow: 1;
+    position: relative;
+    display: inline-block;
 }
 
 .delete {

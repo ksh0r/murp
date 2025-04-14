@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import taskRoutes from './routes/taskRoutes.js';
+import logRoutes from './routes/logRoutes.js';
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ mongoose.connect(MONGO_URI, {
 app.use(cors());
 app.use(express.json());
 app.use('/api/tasks', taskRoutes);
+app.use('/api/logs', logRoutes);
 
 app.get('/', (req,res) => {
     res.send("Welcome to the MurP Server");
