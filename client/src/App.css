@@ -234,6 +234,18 @@ nav a {
     fill: #fff1bf;
     height: 24px;
     width: 24px;
+}
 
+
+/* Log */
+
+.log-header {
+    align: center;
+    height: 500px;
+}
+
+.log-header h2 {
+    font-size: 1.75rem;
+    color: #fff1bf;
 }
 
