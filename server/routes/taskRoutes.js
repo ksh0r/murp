@@ -26,6 +26,16 @@ router.put('/:id', async (req,res) => {
     } catch (err) {
         res.status(500).json({ message: "Server Error",error: err.message });
     }
-})
+});
+
+router.delete('/:id', async (req,res) => {
+    try {
+        const deletedTask = await Task.findByIdAndDelete(req.params.id);
+        if(!deletedTask) return res.status(404).json({ message: "Task not found" });
+        res.json({ message: "Task Deleted", task: deletedTask });
+    } catch (err) {
+        res.status(500).json({ message: "Server Error", error: err.message });
+    }
+});
 
 export default router;
