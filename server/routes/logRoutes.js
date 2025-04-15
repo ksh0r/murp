@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', async (req,res) => {
     try {
-        const logs = await Log.find().sort({date: -1});
+        const logs = await Log.find();
         res.json(logs);
     } catch (err) {
         res.status(500).json({error: "Server Error"});
@@ -21,6 +21,16 @@ router.post('/', async (req,res) => {
         res.status(201).json(savedLog)
     } catch (err) {
         res.status(500).json({error: "Server Error"});
+    }
+})
+
+router.delete('/:id', async (req,res) => {
+    try {
+        const deletedLog = await Log.findByIdAndDelete(req.params.id);
+        if(!deletedTask) return res.status(404).json({ error: "Log not found"});
+        res.json({ message: "Log Deleted", log: deletedLog});
+    } catch (err) {
+        res.status(500).json({ error: "Server Error"});
     }
 })
 

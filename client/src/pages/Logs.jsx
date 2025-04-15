@@ -18,12 +18,21 @@ function Logs() {
             const res = await axios.post("http://localhost:5000/api/logs", {
                 message: newMessage
             });
-            setLogs([...logs, res.data]);
-            setNewTitle("");
+            setLogs([res.data, ...logs]);
+            setNewMessage("");
         } catch (err) {
             console.error("Error adding Log:", err);
         }
     };
+
+    const handleDeletion = async (id) => {
+        try {
+            const res = await axios.delete(`http://localhost:5000/api/logs${id}`);
+            setLogs(logs.filter(log => log._id != id));
+        } catch (err) {
+            console.error("Error deleting task:", err);
+        }
+    }
 
     return (
         <div className="log-header">
@@ -31,6 +40,12 @@ function Logs() {
             <div className="log-input">
                 <input type="text" placeholder="Enter your log" value={newMessage} onChange={(e) => setNewMessage(e.target.value)}/>
                 <button onClick={handleAddLog}>Log</button>
+            </div>
+
+            <div className="log-list">
+                {logs.map((log) => (
+                    <p>{log.message}</p>
+                ))}
             </div>
         </div>
     );
