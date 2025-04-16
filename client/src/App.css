@@ -306,4 +306,18 @@ nav a {
     border: 3px solid #444443;
     border-radius: 5px;
 }
-
+.log-delete {
+    background-color: #1a1a1a;
+    border: 2px solid;
+    border-color: #1a1a1a;
+}
+.log-delete:hover {
+    border: 2px solid;
+    border-color: #fff1bf;
+    transition: border-color 0.2s ease;
+}
+.trash {
+    fill: #fff1bf;
+    height: 24px;
+    width: 24px;
+}

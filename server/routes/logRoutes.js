@@ -27,7 +27,7 @@ router.post('/', async (req,res) => {
 router.delete('/:id', async (req,res) => {
     try {
         const deletedLog = await Log.findByIdAndDelete(req.params.id);
-        if(!deletedTask) return res.status(404).json({ error: "Log not found"});
+        if(!deletedLog) return res.status(404).json({ error: "Log not found"});
         res.json({ message: "Log Deleted", log: deletedLog});
     } catch (err) {
         res.status(500).json({ error: "Server Error"});
