@@ -37,9 +37,9 @@ function Logs() {
     return (
         <div className="log-header">
             <h2>Logs</h2>
-            <div className="log-input">
-                <input type="text" placeholder="Enter your log" value={newMessage} onChange={(e) => setNewMessage(e.target.value)}/>
-                <button onClick={handleAddLog}>Log</button>
+            <div className="log-entry">
+                <input type="text" className="log-input" placeholder="Enter your log" value={newMessage} onChange={(e) => setNewMessage(e.target.value)}/>
+                <button className="log-button" onClick={handleAddLog}>Log</button>
             </div>
 
             <div className="log-list">

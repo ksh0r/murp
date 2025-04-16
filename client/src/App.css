@@ -49,6 +49,9 @@ nav a {
 
 /* Tasks List */
 .task-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
@@ -56,6 +59,7 @@ nav a {
     align: center;
     border: 3px solid #fff1bf;
     border-radius: 2%;
+
 }
 
 .task-header h2 {
@@ -71,6 +75,8 @@ nav a {
 }
 .task-input {
     flex: 1;
+    margin-right: 5px;
+    margin-bottom: 0.6rem;
     padding: 0.5rem 1rem;
     border: 2px solid #2a2e32; 
     border-radius: 5px;
@@ -89,6 +95,7 @@ nav a {
 .task-button {
     background-color: #004369;
     color: #fff1bf;
+    margin-bottom: 0.6rem;
     border: 2px solid #004369;
 }
 .task-button:hover {
@@ -252,5 +259,51 @@ nav a {
 .log-list {
     color: #fff1bf;
     background-color: #242424;
+}
+
+.log-entry {
+    display: flex;
+}
+
+.log-input {
+    flex: 1;
+    margin-right: 5px;
+    position: relative;
+    padding: 0.5rem 1rem;
+    background-color: #2a2e32;
+    border: 2px solid #2a2e32;
+    border-radius: 5px;
+    color: #fff1bf;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+    margin-bottom: 0.6rem;
+}
+
+.log-input:focus {
+    border: 2px solid #fff1bf;
+}
+
+
+.log-button {
+    background-color: #004369;
+    margin-bottom: 0.6rem;
+    color: #fff1bf;
+    border: 2px solid #004369;
+}
+.log-button:hover {
+    border: 2px solid;
+    border-color: #fff1bf;
+    transition: border-color 0.3s ease;
+}
+
+.log-list p {
+    background-color: #2a2e32;
+    color: #E9EAE0;
+    width: 100vh;
+    text-align: left;
+    padding: 5px 3px;
+    border: 3px solid #444443;
+    border-radius: 5px;
 }
 
