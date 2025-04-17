@@ -37,13 +37,33 @@ nav a {
 
 
 /* Dashboard */
-.dashboard {
-    align: center;
-    margin: 2rem auto;
+.dashboard-header {
+    align: top;
 }
 
-.dashboard h2 {
+.dashboard-header h2 {
     font-size: 2rem;
+}
+
+.dashboard-header p {
+    font-size: 1rem;
+}
+
+.dash-container {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 100px auto;
+    column-gap: 50px;
+    margin-bottom: 300px;
+}
+
+.dash-container .dash-tasks {
+    border: 2px solid #fff1bf;
+    border-radius: 5px;
+}
+
+.dash-container .dash-logs {
+    border: 2px solid #fff1bf;
 }
 
 /* Tasks List */

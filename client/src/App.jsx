@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
-import Header from './components/Header.jsx';
-import Dashboard from './components/Dashboard.jsx'
+import Header from './components/Header.jsx'
+//import Dashboard from './components/Dashboard.jsx'
 import Tasks from './pages/Tasks.jsx'
 import Logs from './pages/Logs.jsx'
+import Dashboard from './pages/Dashboard.jsx'
 import './App.css';
 
 function App() {
