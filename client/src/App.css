@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  user-select: none;
 }
 
 /* Header */
@@ -247,8 +246,9 @@ nav a {
 /* Log */
 
 .log-header {
-    align: center;
+    align: center top;
     height: 500px;
+    width: 100vh;
 }
 
 .log-header h2 {
@@ -256,10 +256,6 @@ nav a {
     color: #fff1bf;
 }
 
-.log-list {
-    color: #fff1bf;
-    background-color: #242424;
-}
 
 .log-entry {
     display: flex;
@@ -278,6 +274,7 @@ nav a {
     transition: all 0.2s ease;
     outline: none;
     margin-bottom: 0.6rem;
+    cursor: pointer;
 }
 
 .log-input:focus {
@@ -297,19 +294,32 @@ nav a {
     transition: border-color 0.3s ease;
 }
 
+.log-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #fff1bf;
+    background-color: #242424;
+}
+
 .log-list p {
+    justify-content: space-between;
     background-color: #2a2e32;
     color: #E9EAE0;
-    width: 100vh;
+    width: 90vh;
     text-align: left;
     padding: 5px 3px;
     border: 3px solid #444443;
     border-radius: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .log-delete {
+    width: 10vh;
     background-color: #1a1a1a;
     border: 2px solid;
     border-color: #1a1a1a;
+    align: right;
 }
 .log-delete:hover {
     border: 2px solid;
@@ -320,4 +330,10 @@ nav a {
     fill: #fff1bf;
     height: 24px;
     width: 24px;
+}
+
+.log-date {
+    flex-shrink: 0;
+    padding-right: 10px;
+    color: #7b5369;
 }
