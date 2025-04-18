@@ -17,7 +17,7 @@ function Tasks() {
             const res = await axios.post("http://localhost:5000/api/tasks", {
                 title: newTitle
             });
-            setTasks([res.data, ...tasks]);
+            setTasks([...tasks, res.data]);
             setNewTitle(""); // Clear the input box
         } catch (err) {
             console.error("Error adding Task:", err)
@@ -58,7 +58,7 @@ function Tasks() {
         <button onClick={handleAddTask} className="task-button">Add</button>
         </div>
         <ul className="task-list">
-        {tasks.map((task) => (
+        {[...tasks].reverse().map((task) => (
             <li key={task._id} className={`task-item ${task.isCompleted ? "completed" : ""}`}>
             <label className="checkbox-wrapper">
             <input

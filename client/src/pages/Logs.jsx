@@ -15,10 +15,12 @@ function Logs() {
     const handleAddLog = async () => {
         if (newMessage.trim() === "") return;
         try {
+            const ctime = Date.now();
             const res = await axios.post("http://localhost:5000/api/logs", {
-                message: newMessage
+                message: newMessage,
+                time: ctime
             });
-            setLogs([res.data, ...logs]);
+            setLogs([...logs, res.data]);
             setNewMessage("");
         } catch (err) {
             console.error("Error adding Log:", err);
@@ -43,7 +45,7 @@ function Logs() {
             </div>
 
             <div className="log-list">
-                {logs.map((log) => (
+                {[...logs].reverse().map((log) => (
                     <>
                     <p>
                     <span className="log-date">{log.time}</span>
