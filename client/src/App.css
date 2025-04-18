@@ -59,14 +59,14 @@ nav a {
 }
 
 .dash-container .dash-tasks {
-    height: auto;
+    height: fit-content;
     box-sizing: border-box;
     border: 2px solid #fff1bf;
     border-radius: 5px;
 }
 
 .dash-container .dash-logs {
-    height: auto;
+    height: fit-content;
     box-sizing: border-box;
     border: 2px solid #fff1bf;
     border-radius: 5px;
