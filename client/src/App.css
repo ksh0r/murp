@@ -38,6 +38,7 @@ nav a {
 
 /* Dashboard */
 .dashboard-header {
+    margin-top: 150px;
     align: top;
 }
 
@@ -46,24 +47,55 @@ nav a {
 }
 
 .dashboard-header p {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .dash-container {
     display: grid;
     grid-template-columns: 500px 500px;
-    grid-template-rows: 100px auto;
+    grid-template-rows: auto-fit auto;
     column-gap: 50px;
     margin-bottom: 300px;
 }
 
 .dash-container .dash-tasks {
+    height: auto;
+    box-sizing: border-box;
     border: 2px solid #fff1bf;
     border-radius: 5px;
 }
 
 .dash-container .dash-logs {
+    height: auto;
+    box-sizing: border-box;
     border: 2px solid #fff1bf;
+    border-radius: 5px;
+}
+
+.dash-container h4 {
+    text-decoration: underline;
+    font-size: 1.3rem;
+}
+.dash-container li {
+    padding-right: 10px;
+    font-size: 1.2rem;
+}
+.dash-container li::marker {
+    font-size: 2rem;
+    color: crimson;
+}
+.dash-container .li-comp::marker {
+    font-size: 2rem;
+    color: mediumseagreen;
+}
+.dash-container .li-log::marker {
+    font-size: 2rem;
+    color: royalblue;
+}
+.dash-container .li-log {
+    padding-right: 10px;
+    font-size: 1.2rem;
+    text-align: left;
 }
 
 /* Tasks List */

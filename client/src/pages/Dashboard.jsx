@@ -25,10 +25,20 @@ function Dashboard() {
         </div>
         <div className="dash-container">
             <div className="dash-tasks">
-                <h3>Recent Tasks</h3>
+                <h4>Recent Tasks</h4>
+                <ul>
+                {[...tasks].reverse().slice(0,7).map((task) => (
+                    <li key="task._id" className={task.isCompleted ? "li-comp" : ""}>{task.title}</li>
+                ))}
+                </ul>
             </div>
             <div className="dash-logs">
-                <h3>Recent Logs</h3>
+                <h4>Recent Logs</h4>
+                <ul>
+                {[...logs].reverse().slice(0,7).map((log) => (
+                    <li className="li-log">{log.message}</li>
+                ))}
+                </ul>
             </div>
         </div>
         </>
