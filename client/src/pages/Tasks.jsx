@@ -64,6 +64,8 @@ function Tasks() {
         className="task-input" /> 
         <button ref={buttonRef} onClick={handleAddTask} className="task-button">Add</button>
         </div>
+        {tasks.length === 0 ?
+        <p>Zero tasks.</p> :
         <ul className="task-list">
         {[...tasks].reverse().map((task) => (
             <li key={task._id} className={`task-item ${task.isCompleted ? "completed" : ""}`}>
@@ -82,7 +84,7 @@ function Tasks() {
             </button>
             </li>
         ))}
-        </ul>
+        </ul>}
         </div>
     );
 }

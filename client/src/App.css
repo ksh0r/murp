@@ -90,6 +90,7 @@ nav a {
 }
 .dash-container li {
     padding-right: 10px;
+    color: #fff1bf;
     font-size: 1.2rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -149,7 +150,7 @@ nav a {
     background-color: #2a2e32;
     color: #fff1bf;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: 0.2s;
     outline: none;
 }
@@ -173,6 +174,16 @@ nav a {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+.task-header p {
+    font-size: 2rem;
+    color: royalblue;
+    font-family: serif;
+    font-style: oblique;
+    text-align: center;
+    border: 2px solid #444443;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 .task-item {
@@ -295,10 +306,11 @@ nav a {
     border: 2px solid #2a2e32;
     border-radius: 10px;
     color: #fff1bf;
-    font-size: 1rem;
     outline: none;
     margin-bottom: 0.6rem;
     cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .log-input:focus {
@@ -354,6 +366,7 @@ nav a {
 }
 .log-delete {
     width: 10vh;
+    margin-top: 5px;
     background-color: #1a1a1a;
     border: 3px solid;
     border-color: #1a1a1a;
