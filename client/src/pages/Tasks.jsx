@@ -1,7 +1,13 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 function Tasks() {
+    const buttonRef = useRef(null);
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            buttonRef.current?.click();
+        }
+    }
     const [tasks, setTasks] = useState([]);
     const [newTitle, setNewTitle] = useState("");
 
@@ -52,10 +58,11 @@ function Tasks() {
         <input 
         type="text"
         placeholder="Enter task title"
+        onKeyDown={handleKeyDown}
         value={newTitle}
         onChange={(e) => setNewTitle(e.target.value)}
         className="task-input" /> 
-        <button onClick={handleAddTask} className="task-button">Add</button>
+        <button ref={buttonRef} onClick={handleAddTask} className="task-button">Add</button>
         </div>
         <ul className="task-list">
         {[...tasks].reverse().map((task) => (

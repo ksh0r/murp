@@ -21,10 +21,11 @@
 
 .head-but {
     background-color: #242424;
+    border: 2px solid #242424;
     color: #fffbf0;
 }
 .head-but:hover {
-    border-color: #fffbf0;
+    border: 2px solid #fffbf0;
     transition: border-color 0.3s ease;
 }
 nav a {
@@ -65,6 +66,13 @@ nav a {
     border-radius: 5px;
 }
 
+.dash-container p {
+    font-size: 2rem;
+    font-family: serif;
+    font-style: oblique;
+    color: mediumseagreen;
+}
+
 .dash-container .dash-logs {
     height: fit-content;
     box-sizing: border-box;
@@ -74,11 +82,14 @@ nav a {
 
 .dash-container h4 {
     text-decoration: underline;
+    font-family: serif;
     font-size: 1.3rem;
 }
 .dash-container li {
     padding-right: 10px;
     font-size: 1.2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .dash-container li::marker {
     font-size: 2rem;
@@ -103,13 +114,13 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    height: 100vh;
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
     margin-top: 150px;
     align: center;
-    border: 3px solid #fff1bf;
-    border-radius: 2%;
+    border: none;
 
 }
 
@@ -126,42 +137,9 @@ nav a {
 }
 .task-input {
     flex: 1;
+    padding: 0.5rem 1rem;
     margin-right: 5px;
-    margin-bottom: 0.6rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid #2a2e32; 
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #2a2e32;
-    color: #fff1bf;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: 0.5s;
-    outline: none;
-}
-.task-input:focus {
-    border: 2px solid #fff1bf;
-
-}
-.task-button {
-    background-color: #004369;
-    color: #fff1bf;
-    margin-bottom: 0.6rem;
-    border: 2px solid #004369;
-}
-.task-button:hover {
-    border: 2px solid;
-    border-color: #fff1bf;
-    transition: border-color 0.3s ease;
-}
-
-.task-items {
-    display: flex;
-    justify-content: space-between;
-}
-.task-input {
-    flex: 1;
-    padding: 0.5rem 1rem;
+    margin-bottom: 5px;
     border: 2px solid #2a2e32; 
     border-radius: 5px;
     cursor: pointer;
@@ -173,10 +151,11 @@ nav a {
     outline: none;
 }
 .task-input:focus {
-    border: 2px solid #fff1bf;
+    border: 2px solid #2a2e32;
 
 }
 .task-button {
+    margin-bottom: 5px;
     background-color: #004369;
     color: #fff1bf;
     border: 2px solid #004369;
@@ -199,15 +178,11 @@ nav a {
     padding: 5px 8px;
     margin-bottom: 0.6rem;
     background-color: #242424;
-    border: 2px solid #004369;
+    border: 2px solid #444443;
     border-radius: 6px;
     color: #fff1bf;
 }
 
-.task-item:hover {
-    border-color: #fff1bf;
-    transition: border-color 0.1s ease;
-}
 
 .task-item.completed .task-text {
     color: #7B563A;
@@ -280,20 +255,14 @@ nav a {
 
 .delete {
     background-color: #1a1a1a;
-    border: 2px solid;
+    border: 3px solid;
     border-color: #1a1a1a;
 }
 .delete:hover {
-    border: 2px solid;
-    border-color: #fff1bf;
+    border: 3px solid;
+    border-color: indianred;
     transition: border-color 0.2s ease;
 }
-.trash {
-    fill: #fff1bf;
-    height: 24px;
-    width: 24px;
-}
-
 
 /* Log */
 
@@ -323,14 +292,13 @@ nav a {
     border-radius: 5px;
     color: #fff1bf;
     font-size: 1rem;
-    transition: all 0.2s ease;
     outline: none;
     margin-bottom: 0.6rem;
     cursor: pointer;
 }
 
 .log-input:focus {
-    border: 2px solid #fff1bf;
+    border: 2px solid #2a2e32;
 }
 
 
@@ -354,10 +322,9 @@ nav a {
     background-color: #242424;
 }
 
-.log-list p {
+.log-list {
     justify-content: space-between;
-    background-color: #2a2e32;
-    color: #E9EAE0;
+    color: #fff1bf;
     width: 90vh;
     text-align: left;
     padding: 5px 3px;
@@ -365,27 +332,36 @@ nav a {
     border-radius: 5px;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    font-family: serif;
+    font-size: 1.3rem;
+    padding-right: 10px;
+}
+
+.log-list li::marker {
+    font-size: 1.3rem;
+    color: royalblue;
+}
+.log-list p {
+    font-size: 2rem;
+    color: royalblue;
+    font-family: serif;
+    font-style: oblique;
+    text-align: center;
 }
 .log-delete {
     width: 10vh;
     background-color: #1a1a1a;
-    border: 2px solid;
+    border: 3px solid;
     border-color: #1a1a1a;
-    align: right;
 }
-.log-delete:hover {
-    border: 2px solid;
-    border-color: #fff1bf;
+.log-delete:hover{
+    border: 3px solid;
+    border-color: indianred;
     transition: border-color 0.2s ease;
 }
 .trash {
-    fill: #fff1bf;
-    height: 24px;
-    width: 24px;
+    fill: indianred;
+    height: 18px;
+    width: 18px;
 }
 
-.log-date {
-    flex-shrink: 0;
-    padding-right: 10px;
-    color: #7b5369;
-}

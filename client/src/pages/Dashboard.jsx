@@ -21,24 +21,28 @@ function Dashboard() {
         <>
         <div className="dashboard-header">
             <h2>Welcome to the Dashboard</h2>
-            <p>Overview of the project status, active tasks and previous logs</p>
+            <p>Overview of the active tasks and previous logs</p>
         </div>
         <div className="dash-container">
             <div className="dash-tasks">
                 <h4>Recent Tasks</h4>
+                {tasks.length === 0 ?
+                <p>No tasks for now - a moment of peace.</p> :
                 <ul>
                 {[...tasks].reverse().slice(0,7).map((task) => (
                     <li key="task._id" className={task.isCompleted ? "li-comp" : ""}>{task.title}</li>
                 ))}
-                </ul>
+                </ul>}
             </div>
             <div className="dash-logs">
                 <h4>Recent Logs</h4>
+                {logs.length === 0 ?
+                <p>No recent activity - logs will appear here.</p> :
                 <ul>
                 {[...logs].reverse().slice(0,7).map((log) => (
                     <li className="li-log">{log.message}</li>
                 ))}
-                </ul>
+                </ul>}
             </div>
         </div>
         </>
