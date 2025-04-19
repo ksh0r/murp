@@ -22,7 +22,9 @@
 .head-but {
     background-color: #242424;
     border: 2px solid #242424;
-    color: #fffbf0;
+    color: beige;
+    font-size: 1.2rem;
+    font-weight: semi-bold;
 }
 .head-but:hover {
     border: 2px solid #fffbf0;
@@ -41,6 +43,7 @@ nav a {
 .dashboard-header {
     margin-top: 150px;
     align: top;
+    color: floralwhite;
 }
 
 .dashboard-header h2 {
@@ -211,21 +214,22 @@ nav a {
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: #7b563a;
-    border: 2px solid #7b563a;
+    background-color: #242424;
+    border: 2px solid tomato;
     border-radius: 4px;
     transition: all 0.2s ease;
+    cursor: pointer;
 
 }
 
 .custom-checkmark:hover {
     border: 2px solid;
-    border-color: #fff1bf;
+    border-color: mediumseagreen;
 }
 
 .checkbox-wrapper input:checked + .custom-checkmark {
-    background-color: #7b563a;
-    border-color: #fff1bf;
+    background-color: mediumseagreen;
+    border-color: mediumseagreen;
 }
 
 .custom-checkmark::after {
