@@ -139,9 +139,9 @@ nav a {
     flex: 1;
     padding: 0.5rem 1rem;
     margin-right: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border: 2px solid #2a2e32; 
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     background-color: #2a2e32;
     color: #fff1bf;
@@ -155,7 +155,7 @@ nav a {
 
 }
 .task-button {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     background-color: #004369;
     color: #fff1bf;
     border: 2px solid #004369;
@@ -178,8 +178,8 @@ nav a {
     padding: 5px 8px;
     margin-bottom: 0.6rem;
     background-color: #242424;
-    border: 2px solid #444443;
-    border-radius: 6px;
+    border: 3px solid #444443;
+    border-radius: 10px;
     color: #fff1bf;
 }
 
@@ -289,7 +289,7 @@ nav a {
     padding: 0.5rem 1rem;
     background-color: #2a2e32;
     border: 2px solid #2a2e32;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #fff1bf;
     font-size: 1rem;
     outline: none;
@@ -329,7 +329,7 @@ nav a {
     text-align: left;
     padding: 5px 3px;
     border: 3px solid #444443;
-    border-radius: 5px;
+    border-radius: 10px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-family: serif;
