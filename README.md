@@ -51,9 +51,11 @@ chmod +x install.sh
 
 Replace `<mongo_uri>` with your own MongoDB connection string.
 
-For a local MongoDB setup, ensure `mongodb` and `mongosh` are installed and use the following local storage address: `mongodb://localhost:27017/murpdb`. Before running your application, start the MongoDB service and your preferred web server (like Apache httpd) using your system's init system (runit, OpenRC, or systemd).
-
+For a local MongoDB setup, ensure `mongodb` and `mongosh` are installed and use the following local storage address: `mongodb://localhost:27017/murpdb`. 
 That is:
 ```
 ./install.sh mongodb://localhost:27017/murpdb
 ```
+
+Before running your application, start the MongoDB service and your preferred web server (like Apache httpd) using your system's init system (runit, OpenRC, or systemd).
+
