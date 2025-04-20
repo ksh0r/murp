@@ -8,6 +8,7 @@
 /* Header */
 .header {
     background-color: #004369;
+    user-select: none;
     color: white;
     top: 0;
     left: 0;
