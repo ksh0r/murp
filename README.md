@@ -19,7 +19,7 @@ MURP is a MERN stack application built to boost developers' workflow with clarit
 - ***Dashboard:*** Displays your 7 most recent tasks and logs to provide a snapshot of current progress.
 
 ## Installation Instructions:
-The provided `install.sh` script is tailored for Linux. The script may work with macOS but has not been tested yet. `npm` and `node.js` are necessary for the `install.sh` script to work.
+The provided `install.sh` script is tailored to work with Linux. The script may work with macOS but has not been tested yet. `npm` and `node.js` package are necessary for the `install.sh` script to work.
 
 ```
 Default Backend PORT = 5000
@@ -49,9 +49,9 @@ chmod +x install.sh
 ./install.sh <mongo_uri>
 ```
 
-*Replace `<mongo_uri>` with your own MongoDB connection string.*
+Replace `<mongo_uri>` with your own MongoDB connection string.
 
-For a local MongoDB setup, ensure `mongodb` and `mongosh` are installed and use the following local storage address: `mongodb://localhost:27017/murpdb`
+For a local MongoDB setup, ensure `mongodb` and `mongosh` are installed and use the following local storage address: `mongodb://localhost:27017/murpdb`. Ensure `mongodb` service has beed started up before running the application with your init system of choice(runit, OpenRC, systemd).
 
 That is:
 ```
