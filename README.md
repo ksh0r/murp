@@ -1,5 +1,6 @@
 # MURP
 A developer's local companion for *productivity* and *task management*.
+![MURP Dashboard](./screenshots/Dashboard.png)
 
 ## What is MURP?
 MURP is a MERN stack application built to boost developers' workflow with clarity and focus. It combines structured To-Do Management, Log tracking, and a Dashboard for effective reflection on completed work.
