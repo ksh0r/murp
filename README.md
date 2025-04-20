@@ -9,4 +9,33 @@ MURP is a MERN stack application built to boost the developers workflow with cla
 - Log Tracking: Document your development workflow for better reflections in the future.
 - Dashboard: Displays the recent 7 tasks and logs to get an image on What's going on.
 
+## Installation Instruction:
+The provided `install.sh` script is tailored for linux. The script may work with MacOS but not tested yet. `npm` and `node.js` is necessary for the `install.sh` script to work.
+
+### Dependencies:
+The following dependencies are installed automatically using the `install.sh` script.
+
+`
+- node and npm
+- nodemon
+- react
+- react-router-dom
+- react-dom
+- cors
+- dotenv
+- express.js
+- mongoose
+- axios
+`
+
+How to install:
+`
+git clone https://github.com/ksh0r/murp.git
+cd murp
+chmod +x install.sh
+./install.sh
+`
+
+
+
 
