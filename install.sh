@@ -39,10 +39,10 @@ cd ../client
 npm install
 
 
-echo "${GREEN}Setup Complete${NC}!!!"
+echo -e "${GREEN}Setup Complete${NC}"
 
 echo "You can run the program manually by running the following commands:"
-echo "- Backend: cd server && npx nodemon run"
-echo "- Frontend: cd client && npm run dev"
-echo "${YELLOW}Default Frontend Port = 5173${NC}"
-echo "${YELLOW}Defulat Backend Port = 5000${NC}"
+echo -e "- Backend: ${GREEN}cd server && npx nodemon run${NC}"
+echo -e "- Frontend:${GREEN} cd client && npm run dev${NC}"
+echo -e "${YELLOW}Default Frontend Port = 5173${NC}"
+echo -e "${YELLOW}Defulat Backend Port = 5000${NC}"
