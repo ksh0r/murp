@@ -15,7 +15,7 @@ The provided `install.sh` script is tailored for linux. The script may work with
 ### Dependencies:
 The following dependencies are installed automatically using the `install.sh` script.
 
-`
+```
 - node and npm
 - nodemon
 - react
@@ -26,15 +26,15 @@ The following dependencies are installed automatically using the `install.sh` sc
 - express.js
 - mongoose
 - axios
-`
+```
 
 How to install:
-`
+```
 git clone https://github.com/ksh0r/murp.git
 cd murp
 chmod +x install.sh
 ./install.sh
-`
+```
 
 
 
